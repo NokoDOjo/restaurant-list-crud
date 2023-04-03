@@ -9,6 +9,7 @@ route.get('/new', (req, res) => {
 // create a new restaurant
 route.post('', (req, res) => {
   const options = req.body
+  console.log(options)
   Restaurant.create(options)
     .then(() => res.redirect('/'))
     .catch(err => console.error(err))
